@@ -1,0 +1,8 @@
+RewriteEngine On
+RewriteCond %{HTTP_REFERER} !^http://(.+\.)?papermashup\.com/ [NC]
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !google\. [NC]
+RewriteCond %{HTTP_REFERER} !search\?q=cache [NC]
+RewriteCond %{HTTP_REFERER} !msn\. [NC]
+RewriteCond %{HTTP_REFERER} !yahoo\. [NC]
+RewriteRule .*\.(jpe?g|gif|bmp|png|jpg)$ images/hotlink.jpe [L]
